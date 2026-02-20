@@ -750,17 +750,9 @@ export default function InnerWorld() {
     return {
       timestamp: new Date().toISOString(),
       sessionData: {
-        kingdom: K?.name||"Unknown",
-        schema: result?.pk||"Unknown",
         initialIntensity: ans.intensity,
         postIntensity: postInt,
-        intensityDelta: ans.intensity - postInt,
-        xpEarned: xp+25,
-        journalEntryCount: journal.length,
-        experimentsSelected: calTasks.map(t=>t.name),
-        goals: missionGoals,
       },
-      journal: journal.map(e=>({moment:e.moment,text:e.text,minion:e.minion,boss:e.boss})),
       surveyResponses: surveyData,
     };
   };
